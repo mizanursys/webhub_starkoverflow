@@ -43,11 +43,11 @@ class QuestionController extends Controller
 
     }
     public function result(){
+      // echo "string";
+      // die();
+      //   $result = new Result();
 
-        $result = new Result();
-        // echo "string";
-        // die();
-        //return view("question/result");
+        return view("question/result");
     }
 
 

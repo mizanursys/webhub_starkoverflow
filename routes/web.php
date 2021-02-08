@@ -20,7 +20,7 @@ Route::post('/questions/comment', 'QuestionController@comment')->name('questions
 Route::get('/questions/{id}/{slug}', 'QuestionController@showQuestionDetail');
 Route::get('/questions/list', 'QuestionController@showQuestionList');
 Route::get('/auth/quiz', 'QuestionController@quiz');
-Route::post('/auth/result', 'QuestionController@result');
+Route::post('result', 'QuestionController@result');
 
 Route::get('/answer/{id}/edit','QuestionController@showEditAnswer');
 Route::post('/answer/edit', 'QuestionController@editAnswer')->name('answer.edit');

@@ -4,8 +4,9 @@
 
 <!--code by webdevtrick (webdevtrick.com) -->
 <head>
-	<meta charset=UTF-8" />
 
+	<meta name="csrf-token" content="{!! csrf_token() !!}">
+	<script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
 	<title>PHP QUIZ | Webdev.com</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css" />
@@ -17,8 +18,8 @@
 
 	<h1>Simple Quiz Built On PHP</h1>
 
-	<form action="{{ url('/auth/result') }}" method="post" id="quiz">
-
+	<form action="{{ url('result') }}" method="post" id="quiz">
+ {{ csrf_field() }}
             <ol>
 
                 <li>
